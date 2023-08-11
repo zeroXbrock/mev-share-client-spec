@@ -73,10 +73,10 @@ POST requests sent to the Bundle API (e.g. `relay.flashbots.net`) must include a
 
 Reference implementations are provided:
 
-- [matchmaker-ts client](https://github.com/flashbots/matchmaker-ts/blob/main/src/flashbots.ts#L24) (typescript, ethers v6)
+- [mev-share-client-ts](https://github.com/flashbots/matchmaker-ts/blob/main/src/flashbots.ts#L24) (typescript, ethers v6)
 - [ethers-provider-flashbots-bundle client](https://github.com/flashbots/ethers-provider-flashbots-bundle/blob/master/src/index.ts#L1083) (typescript, ethers v5)
 - [flashbotsrpc client](https://github.com/metachris/flashbotsrpc/blob/master/flashbotsrpc.go#L165-L171) (go)
-- [artemis matchmaker client](https://github.com/paradigmxyz/artemis/blob/main/crates/clients/matchmaker/src/flashbots_signer.rs#L75-L78) (rust)
+- 
 
 ## public methods
 
@@ -225,6 +225,22 @@ This method sends a transaction via `eth_sendPrivateTransaction` to the instance
 | options | private transaction options (specified below) |
 
 ```tsx
+/**
+ * Hints specify which data is shared with searchers on mev-share.
+ */
+export interface HintPreferences {
+    /** Share the calldata of the transaction. */
+    calldata?: boolean,
+    /** Share the contract address of the transaction. */
+    contractAddress?: boolean,
+    /** Share the 4byte function selector of the transaction. */
+    functionSelector?: boolean,
+    /** Share the logs emitted by the transaction. */
+    logs?: boolean,
+    /** Share tx hashes of transactions in bundle. */
+    txHash?: boolean,
+}
+
 export interface TransactionOptions {
     /** Hints define what data about a transaction is shared with searchers. */
     hints?: HintPreferences,
