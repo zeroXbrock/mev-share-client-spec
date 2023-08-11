@@ -78,10 +78,6 @@ Reference implementations are provided:
 - [flashbotsrpc client](https://github.com/metachris/flashbotsrpc/blob/master/flashbotsrpc.go#L165-L171) (go)
 - [artemis matchmaker client](https://github.com/paradigmxyz/artemis/blob/main/crates/clients/matchmaker/src/flashbots_signer.rs#L75-L78) (rust)
 
-### encoding/serialization
-
-Please encode the JSON serialization discretely in its own layer, so that it can be replaced with another encoding at a later time.
-
 ## public methods
 
 The following methods are called from an instance of the mev-share client, using the params stored by the constructor to send requests. The names are only descriptions — please use your best judgement to find the simplest idiomatic naming scheme for your library’s methods.
