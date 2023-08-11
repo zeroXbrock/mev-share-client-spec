@@ -76,7 +76,7 @@ Reference implementations are provided:
 - [mev-share-client-ts](https://github.com/flashbots/matchmaker-ts/blob/main/src/flashbots.ts#L24) (typescript, ethers v6)
 - [ethers-provider-flashbots-bundle client](https://github.com/flashbots/ethers-provider-flashbots-bundle/blob/master/src/index.ts#L1083) (typescript, ethers v5)
 - [flashbotsrpc client](https://github.com/metachris/flashbotsrpc/blob/master/flashbotsrpc.go#L165-L171) (go)
-- 
+- [mev-share-rs](https://github.com/paradigmxyz/mev-share-rs/blob/main/crates/mev-share-rpc-api/src/auth.rs#L97-L107) (rust)
 
 ## public methods
 
